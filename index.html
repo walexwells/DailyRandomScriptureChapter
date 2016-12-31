@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.0/seedrandom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+	<script>
+		
+		Math.seedrandom(0);
+		var day = moment().diff(moment('2016-12-30T00:00:00'),'days')
+
+		var randNumber
+		for(var i = 0; i < day; i++){
+			randNumber = Math.random()
+		}
+
+		var chapters = [
+			{book: 'Genesis', chapters: 50, weight: 1},
+			{book: 'Exodus', chapters: 40, weight: 1},
+			{book: 'Leviticus', chapters: 27, weight: 1},
+			{book: 'Numbers', chapters: 36, weight: 1},
+			{book: 'Deuteronomy', chapters: 34, weight: 1},
+			{book: 'Joshua', chapters: 24, weight: 1},
+			{book: 'Judges', chapters: 21, weight: 1},
+			{book: 'Ruth', chapters: 4, weight: 1},
+			{book: '1 Samuel', chapters: 31, weight: 1},
+			{book: '2 Samuel', chapters: 24, weight: 1},
+			{book: '1 Kings', chapters: 22, weight: 1},
+			{book: '2 Kings', chapters: 25, weight: 1},
+			{book: '1 Chronicles', chapters: 29, weight: 1},
+			{book: '2 Chronicles', chapters: 36, weight: 1},
+			{book: 'Ezra', chapters: 10, weight: 1},
+			{book: 'Nehemiah', chapters: 13, weight: 1},
+			{book: 'Esther', chapters: 10, weight: 1},
+			{book: 'Job', chapters: 42, weight: 1},
+			{book: 'Psalms', chapters: 150, weight: 1},
+			{book: 'Proverbs', chapters: 31, weight: 1},
+			{book: 'Ecclesiastes', chapters: 12, weight: 1},
+			{book: 'Song of Solomon', chapters: 8, weight: 1},
+			{book: 'Isaiah', chapters: 66, weight: 1},
+			{book: 'Jeremiah', chapters: 52, weight: 1},
+			{book: 'Lamentations', chapters: 5, weight: 1},
+			{book: 'Ezekiel', chapters: 48, weight: 1},
+			{book: 'Daniel', chapters: 12, weight: 1},
+			{book: 'Hosea', chapters: 14, weight: 1},
+			{book: 'Joel', chapters: 3, weight: 1},
+			{book: 'Amos', chapters: 9, weight: 1},
+			{book: 'Obadiah', chapters: 1, weight: 1},
+			{book: 'Jonah', chapters: 4, weight: 1},
+			{book: 'Micah', chapters: 7, weight: 1},
+			{book: 'Nahum', chapters: 3, weight: 1},
+			{book: 'Habakkuk', chapters: 3, weight: 1},
+			{book: 'Zephaniah', chapters: 3, weight: 1},
+			{book: 'Haggai', chapters: 2, weight: 1},
+			{book: 'Zechariah', chapters: 14, weight: 1},
+			{book: 'Malachi', chapters: 4, weight: 1},
+			{book: 'Matthew', chapters: 28, weight: 2},
+			{book: 'Mark', chapters: 16, weight: 2},
+			{book: 'Luke', chapters: 24, weight: 2},
+			{book: 'John', chapters: 21, weight: 2},
+			{book: 'Acts', chapters: 28, weight: 2},
+			{book: 'Romans', chapters: 16, weight: 2},
+			{book: '1 Corinthians', chapters: 16, weight: 2},
+			{book: '2 Corinthians', chapters: 13, weight: 2},
+			{book: 'Galatians', chapters: 6, weight: 2},
+			{book: 'Ephesians', chapters: 6, weight: 2},
+			{book: 'Philippians', chapters: 4, weight: 2},
+			{book: 'Colossians', chapters: 4, weight: 2},
+			{book: '1 Thessalonians', chapters: 5, weight: 2},
+			{book: '2 Thessalonians', chapters: 3, weight: 2},
+			{book: '1 Timothy', chapters: 6, weight: 2},
+			{book: '2 Timothy', chapters: 4, weight: 2},
+			{book: 'Titus', chapters: 3, weight: 2},
+			{book: 'Philemon', chapters: 1, weight: 2},
+			{book: 'Hebrews', chapters: 13, weight: 2},
+			{book: 'James', chapters: 5, weight: 2},
+			{book: '1 Peter', chapters: 5, weight: 2},
+			{book: '2 Peter', chapters: 3, weight: 2},
+			{book: '1 John', chapters: 5, weight: 2},
+			{book: '2 John', chapters: 1, weight: 2},
+			{book: '3 John', chapters: 1, weight: 2},
+			{book: 'Jude', chapters: 1, weight: 2},
+			{book: 'Revelation', chapters: 22, weight: 2},
+			{book: '1 Nephi', chapters: 22, weight: 2},
+			{book: '2 Nephi', chapters: 33, weight: 2},
+			{book: 'Jacob', chapters: 7, weight: 2},
+			{book: 'Enos', chapters: 1, weight: 2},
+			{book: 'Jarom', chapters: 1, weight: 2},
+			{book: 'Omni', chapters: 1, weight: 2},
+			{book: 'Words of Mormon', chapters: 1, weight: 2},
+			{book: 'Mosiah', chapters: 29, weight: 2},
+			{book: 'Alma', chapters: 63, weight: 2},
+			{book: 'Helaman', chapters: 16, weight: 2},
+			{book: '3 Nephi', chapters: 30, weight: 2},
+			{book: '4 Nephi', chapters: 1, weight: 2},
+			{book: 'Mormon', chapters: 9, weight: 2},
+			{book: 'Ether', chapters: 15, weight: 2},
+			{book: 'Moroni', chapters: 10, weight: 2},
+			{book: 'Doctrine and Covenants', chapters: 138, weight: 2},
+			{book: 'Moses', chapters: 8, weight: 2},
+			{book: 'Abraham', chapters: 5, weight: 2},
+			{book: 'Joseph Smith—Matthew', chapters: 1, weight: 2},
+			{book: 'Joseph Smith—History', chapters: 1, weight: 2},
+			{book: 'Articles of Faith', chapters: 1, weight: 2}
+		].map(function(book){
+			var chapters = []
+			for(var i = 1; i <= book.chapters; i++){
+				for(var j = 0; j < book.weight; j++){
+					chapters.push(book.book + ' ' + i)
+				}
+			}
+			return chapters
+		}).reduce(function(a,b){
+			return a.concat(b)
+		})
+	document.write(chapters[Math.floor(Math.random()*chapters.length)])
+	</script>
+</head>
+<body>
+</body>
+</html>
