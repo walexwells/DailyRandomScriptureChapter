@@ -1,9 +1,26 @@
 <!doctype html>
 <html>
 <head>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Random Daily Scripture Chapter</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.0/seedrandom.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+	<style>
+	
+		body {
+			font-size: 2em;
+		}
+
+		#content {
+			text-align: center;
+			margin: 1em;
+		}
+	</style>
+</head>
+<body>
+	<div>Scripture chapter for the day:</div>
+	<div id="content"></div>
 	<script>
 		
 		Math.seedrandom(0);
@@ -113,9 +130,8 @@
 		}).reduce(function(a,b){
 			return a.concat(b)
 		})
-	document.write(chapters[Math.floor(Math.random()*chapters.length)])
+
+	document.getElementById('content').textContent = chapters[Math.floor(Math.random()*chapters.length)]
 	</script>
-</head>
-<body>
 </body>
 </html>
